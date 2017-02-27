@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Test work">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test work</title>
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--header START-->
+  <header class="header">
+    <a href="#" class="logo">
+      <h1>TEST</h1>
+      <img src="img/logo.png" alt="test logotype" class="logo__img">
+    </a>
+    <button class="btn header__btn">List your property</button>
+
+  </header>
+  <!--header END-->
+  <!--main START-->
+    <main class="main">
+      <div class="amenities">
+
+          <div class="amenities__title has-dropdown-title amenities__l">
+           <span class="dropdown-btn dropdown-btn--active"></span>
+           <h3>Amenities</h3>
+         </div>
+
+        <form action="" class="amenities__form dropdown-title">
+          <ul class="l-grid">
+            <!--l-grid__item START-->
+            <li class="l-grid__item">
+              <div class="amenities__title">
+              <h3>Amenities search</h3>
+              </div>
+              <select type="text" multiple="multiple" class="form-control" id="select-state">
+              </select>
+            </li>
+            <!--l-grid__item END-->
+            <!--l-grid__item START-->
+            <li class="l-grid__item">
+               <div class="amenities__title has-dropdown">
+              <span class="dropdown-btn"></span>
+              <h3>Popular amenities</h3>
+               </div>
+              <ul class="amenities__list">
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="air_conditioner" value="Air conditioner" />
+                  <label class="lable-checkbox" for="air_conditioner">Air conditioner</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="computer" value="Computer" />
+                  <label class="lable-checkbox" for="computer">Computer</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="cooking_hob" value="Cooking hob" />
+                  <label class="lable-checkbox" for="cooking_hob">Cooking hob</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="free_transportation" value="Free Transportation" />
+                  <label class="lable-checkbox" for="free_transportation">Free Transportation</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="free_wireless_internet" value="Free wireless internet" />
+                  <label class="lable-checkbox" for="free_wireless_internet">Free wireless internet</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item ">
+                  <input type="checkbox" id="guarded_parking" value="Guarded parking" />
+                  <label class="lable-checkbox" for="guarded_parking">Guarded parking</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="hair_dryer" value="Hair dryer" />
+                  <label class="lable-checkbox" for="hair_dryer">Hair dryer</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="washing_machine" value="Washing machine" />
+                  <label class="lable-checkbox" for="washing_machine">Washing machine</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="wireless_internet" value="Wireless internet" />
+                  <label class="lable-checkbox" for="wireless_internet">Wireless internet</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="free_wireless_internet_2" value="Free wireless internet 2" />
+                  <label class="lable-checkbox" for="free_wireless_internet_2">Free wireless internet 2</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="washing_machine_2" value="Washing machine 2" />
+                  <label class="lable-checkbox" for="washing_machine_2">Washing machine 2</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="tv_local_channels_only" value="TV (local channels only)" />
+                  <label class="lable-checkbox" for="tv_local_channels_only">TV (local channels only)</label>
+                </li>
+                <!--amenities__item END-->
+              </ul>
+            </li>
+            <!--l-grid__item END-->
+            <!--l-grid__item START-->
+            <li class="l-grid__item">
+               <div class="amenities__title">
+              <h3>Apartment</h3>
+              </div>
+              <ul class="amenities__list">
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="balcony" value="Balcony" />
+                  <label class="lable-checkbox" for="balcony">Balcony</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="fireplace" value="Fireplace" />
+                  <label class="lable-checkbox" for="fireplace">Fireplace</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="floor_heating" value="Floor heating" />
+                  <label class="lable-checkbox" for="floor_heating">Floor heating</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="game_room" value="Game room" />
+                  <label class="lable-checkbox" for="game_room">Game room</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="terrace" value="Terrace" />
+                  <label class="lable-checkbox" for="terrace">Terrace</label>
+                </li>
+                <!--amenities__item END-->
+              </ul>
+            </li>
+            <!--l-grid__item END-->
+            <!--l-grid__item START-->
+            <li class="l-grid__item">
+               <div class="amenities__title has-dropdown">
+              <span class="dropdown-btn"></span>
+              <h3>Kitchen</h3>
+              </div>
+              <ul class="amenities__list">
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="blender" value="Blender" />
+                  <label class="lable-checkbox" for="blender">Blender</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="coffee_maker" value="Coffee make" />
+                  <label class="lable-checkbox" for="coffee_maker">Coffee maker</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="cooking_hob_2" value="Cooking hob 2" />
+                  <label class="lable-checkbox" for="cooking_hob_2">Cooking hob 2</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="dishwasher" value="Dishwasher" />
+                  <label class="lable-checkbox" for="dishwasher">Dishwasher</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="freezer" value="Freezer" />
+                  <label class="lable-checkbox" for="freezer">Freezer</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item">
+                  <input type="checkbox" id="fridge" value="Fridge" />
+                  <label class="lable-checkbox" for="fridge">Fridge</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="blender_2" value="Blender 2" />
+                  <label class="lable-checkbox" for="blender_2">Blender 2</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="coffee_maker_2" value="Coffee maker 2" />
+                  <label class="lable-checkbox" for="coffee_maker_2">Coffee maker 2</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="cooking_hob_3" value="Cooking hob " />
+                  <label class="lable-checkbox" for="cooking_hob_3">Cooking hob 3</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="dishwasher_2" value="Dishwasher 2" />
+                  <label class="lable-checkbox" for="dishwasher_2">Dishwasher 2</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="freezer_2" value="Freezer 2" />
+                  <label class="lable-checkbox" for="freezer_2">Freezer 2</label>
+                </li>
+                <!--amenities__item END-->
+                <!--amenities__item START-->
+                <li class="amenities__item dropdown-item">
+                  <input type="checkbox" id="fridge_2" value="Fridge 2" />
+                  <label class="lable-checkbox" for="fridge_2">Fridge 2</label>
+                </li>
+                <!--amenities__item END-->
+              </ul>
+            </li>
+            <!--l-grid__item END-->
+          </ul>
+        </form>
+      </div>
+      <div class="catalog">
+        <div class="catalog__nav">
+          <a href="javascript:void(0)" class="catalog__tab catalog__tab--map catalog__tab--active">Map</a>
+          <a href="javascript:void(0)" class="catalog__tab catalog__tab--list">Accommodations</a>
+        </div>
+        <div class="catalog__info">
+          <div class="tagfield"></div>
+          <div class="catalog__offers"><span class="catalog__value" id="total_apartmens"></span> offers</div>
+        </div>
+        <div class="catalog__content">
+          <div class="catalog__map catalog__toggle catalog__toggle--active" id="map"></div>
+          <div class="catalog__list catalog__toggle" id="apartmens">
+          </div>
+        </div>
+      </div>
+    </main>
+  <!--main END-->
+      <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+  <script>
+
+var mymap = L.map('map');
+
+	L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+	subdomains: 'abcd',
+	maxZoom: 19
+}).addTo(mymap);
+
+
+</script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script id="apartment-template" type="text/html">
+         <a href="javascript:void(0)" class="catalog__item apartment">
+            <div class="apartment__img-wrapper">
+                <img src=<%= img %> alt=<%= name %> class="apartment__img">
+            </div>
+              <div class="apartment__text">
+                <div class="apartment__name"><%= name %>r</div>
+                <div class="apartment__cost">
+                  <span  class="apartment__currency">&euro;</span>
+                  <span class="apartment__value"><%= value %></span>
+                </div>
+              </div>
+    
+            </a>
+    </script>
+
+
+</body>
+
+</html>

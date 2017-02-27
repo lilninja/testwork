@@ -1,0 +1,429 @@
+@import "mixins"
+@import "vars"
+@import "fonts"
+@import "reset"
+@import "fonts"
+@import "perfect-scrollbar"
+@import "selectize"
+@import "markerCluster"
+
+html
+  font-size: 10px
+body
+  font-family: Open Sans
+  +fs(13)
+  line-height: 1.85
+  height: 100vh
+  background-color: #fff
+  color: $font-color-main
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: auto
+
+h1
+  +fs(34.5)
+  font-weight: 800
+  color: $font-color-title
+
+h3
+  font-size: inherit
+  color: $font-color-secondary
+  font-weight: 600
+
+a,a:link,a:visited,a:hover,a:active
+  text-decoration: none
+
+// selectize
+
+.has-items
+  padding: 3px 8px 0px !important
+.items
+  min-height: 38px
+  margin-top: 5px !important
+  border-radius: 4px !important
+  background-color: #fff !important
+  box-shadow: 0px 1px 17.6px 3.4px rgba(0, 0, 0, 0.07) !important
+  border: solid 1px rgb(225, 230, 232) !important
+  padding-left: 46px !important
+  background-image: url(../img/magnifier.png)
+  background-position: 15px 50%
+  background-repeat: no-repeat
+.item
+  display: inline-block
+  border-radius: 4px !important
+  background-color: #fff !important
+  background-image: none !important
+  color: $font-color-main !important
+  text-shadow: none !important
+  line-height: 2.8rem !important
+  font-size: 13px !important
+  font-size: 1.3rem !important
+  padding: 0 10px !important
+  box-shadow: 0px 1px 17.6px 3.4px rgba(0, 0, 0, 0.07) !important
+  border: solid 1px rgb(225, 230, 232) !important
+  margin: 0 3px 3px 0
+  position: relative
+  padding-right: 24px !important
+  white-space: nowrap
+
+.remove
+  position: absolute
+  right: 0
+  bottom: 0
+  width: 17px
+  display: inline-block
+  padding: 2px 0 0 0
+  padding-right: 10px !important
+  margin-bottom: 0.1rem !important
+  border: none !important
+  top: -1px !important
+  text-align: center
+  color: $font-color-title !important
+  font-size: 20px !important
+  font-size: 2rem !important
+  font-weight: 600 !important
+  line-height: 2.8rem
+  z-index: 1
+  text-decoration: none
+  vertical-align: middle
+
+  &:hover
+    background-color: transparent !important
+
+//map
+.leaflet-tooltip
+  top: 22px
+  background-color: transparent
+  border: none
+  border-radius: none
+  color: #fff
+  box-shadow: none
+
+.leaflet-popup-content-wrapper
+  border-radius: 0 !important
+  box-shadow: 0px 5px 27.2px 4.8px rgba(70, 72, 74, 0.12) !important
+.leaflet-tile-container
+  filter: grayscale(100%)
+.cluster-icon
+  width: 50px
+  height: 50px
+  line-height: 50px
+  color: #fff
+  font-weight: 700
+  +fs(12)
+  border-radius: 50%
+  background-image: url(../img/cluster.png)
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: contain
+  text-align: center
+
+  
+//base
+.has-dropdown
+  cursor: pointer
+.header
+  position: relative
+  height: 60px  
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: #fff
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.07)
+  z-index: 3
+  &__btn
+    margin-right: 30px
+    @media screen and (max-width: $break-extra-small)
+      margin-right: 15px
+.btn
+  padding: 0 27px
+  font-weight: 700
+  padding: 0 27px
+  border-radius: 17.5px
+  background-color: #f3781e
+  height: 36px
+  line-height: 36px
+  color: #fff
+  
+  &:hover,&:active
+    box-shadow: 0px 1px 17.6px 3.4px rgba(0, 0, 0, 0.07)
+
+.logo
+  margin-left: 28px
+  display: flex
+  height: 100%
+  align-items: center
+  &__img
+    display: inline-block
+    height: 32px
+    width: auto
+  @media screen and (max-width: $break-extra-small)
+    margin-left: 15px
+.main
+  display: flex
+
+  @media screen and (max-width: $break-small)
+    display: block
+
+.amenities
+  position: relative
+  display: flex
+  flex: 1
+  padding: 30px
+  height: calc(100vh - 60px)
+  background-color: #fff
+  box-shadow: 0px 5px 27.2px 4.8px rgba(70, 72, 74, 0.12)
+  z-index: 2
+  overflow-y: auto
+  &--is-close
+    position: absolute
+    display: none
+  @media screen and (max-width: $break-large)
+    flex-flow: column nowrap
+
+  @media screen and (max-width: $break-medium-2)
+    width: 235px
+    flex: none
+
+  @media screen and (max-width: $break-small)
+    width: 100%
+    display: block
+    max-height: none
+    height: auto
+  &__form
+    flex: 4
+  &__title
+    display: flex
+    align-items: center
+  &__l
+    height: 2.5rem
+    align-items: flex-start
+    flex: 1
+    line-height: 1.3
+    @media screen and (max-width: $break-large)
+      flex: none
+      margin-bottom: 20px
+  &__list
+    font-size: 0
+  &__item
+    display: inline-block
+    margin-top: 20px
+    width: 33.3%
+    +fs(13)
+    +text-overflow
+    @media screen and (max-width: $break-large)
+      width: 50%
+    @media screen and (max-width: $break-medium)
+      width: 100%
+    @media screen and (max-width: $break-small)
+      width: 50%
+    @media screen and (max-width: $break-extra-small)
+      width: 100%
+
+input[type="checkbox"]
+  position: absolute
+  clip: rect(0,0,0,0)
+
+.lable-checkbox
+  position: relative
+  padding-left: 3.52rem
+
+
+.lable-checkbox:before
+  content: ''
+  position: absolute
+  left: 0
+  top: 0
+  width: 20px
+  height: 20px
+  border: solid 1px #cdd1d4
+  background: #fff
+  border-radius: 3px
+  transition: background-color .2s
+
+input[type="checkbox"]:checked + .lable-checkbox:before
+  background-image: url(../img/check.png)
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-color: $font-color-title
+  border: solid 1px $font-color-title
+
+.dropdown-btn
+  position: relative
+  display: inline-block
+  background-color: $font-color-title
+  border-radius: 50%
+  width: 18px
+  height: 18px
+  margin-right: 10px
+  &:before, &:after
+    content: ""
+    position: absolute
+    background-color: white
+    transition: transform 0.25s ease-out
+  &:before
+    top: 4px
+    left: 50%
+    width: 2px
+    height: 10px
+    margin-left: -1px
+  &:after
+    top: 50%
+    left: 4px
+    width: 10px
+    height: 2px
+    margin-top: -1px
+  &--active
+    cursor: pointer
+    &:before 
+      transform: rotate(90deg)
+    &:after
+      transform: rotate(180deg)
+
+.l-grid
+  display: flex
+  flex-flow: column nowrap
+  &__item + &__item
+    padding: 20px 0
+    border-bottom: 1px solid rgba(235, 240, 242, .7)
+  &__item:last-child
+    border: none
+
+.catalog
+  position: relative
+  min-width: 960px
+  z-index: 0
+  flex: 1
+  @media screen and (max-width: $break-medium-2)
+    flex: 1
+    min-width: auto
+    width: 100%
+  &__nav
+    display: flex
+    height: 47px
+  &__offers
+    font-weight: 600
+    white-space: nowrap
+  &__toggle
+    display: none
+    &--active
+      display: block
+  &__info
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 29px
+    min-height: 67px
+    background-color: #fff
+    box-shadow: 0px 5px 27.2px 4.8px rgba(70, 72, 74, 0.12)
+    z-index: 2
+  &__map
+    position: relative
+    height: calc(100vh - 60px - 47px - 67px)
+    z-index: 1
+  &__list
+    position: relative
+    font-size: 0
+    padding: 15px
+    max-height: calc(100vh - 60px - 47px - 67px)
+    @media screen and (max-width: $break-medium-2)
+      text-align: center
+    @media screen and (max-width: $break-extra-small)
+      max-height: none
+  &__tab
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    +fs(14)
+    font-weight: 700
+    color: $font-color-title
+    background-color: #f7f9fa
+    opacity: 0.7
+    &--active
+      position: relative
+      opacity: 1
+      background-color: #fff
+      &:before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        box-shadow: 0px 5px 27.2px 4.8px rgba(70, 72, 74, 0.12)
+        z-index: 1
+      &:after
+        position: absolute
+        content: ''
+        width: 100%
+        height: 15px
+        top: 69%
+        left: 0
+        background-color: #fff
+        z-index: 3
+        box-shadow: none
+    &__content
+      text-align: center
+ 
+.apartment
+  position: relative
+  display: inline-block
+  width: 435px
+  height: auto
+  margin: 15px
+  font-size: 0
+  &:hover,&:active
+    box-shadow: 0px 5px 27.2px 4.8px rgba(70, 72, 74, 0.12)
+  @media screen and (max-width: $break-medium-2)
+    max-width: 100%
+    width: auto
+  &__img-wrapper
+    position: relative
+    border-radius: 10px
+    overflow: hidden
+    z-index: 2
+    &:after
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-image: linear-gradient(to top, #000 0%, transparent 30%)
+      z-index: 2
+  &__img
+    width: 100%
+    height: auto
+  &__text
+    position: absolute
+    display: flex
+    padding: 0 15px
+    justify-content: space-between
+    align-items: center
+    color: #fff
+    width: 100%
+    height: 48px
+    bottom: 0
+    left: 0
+    z-index: 3
+  &__name
+    +text-overflow
+    +fs(16)
+    font-weight: 600
+    @media screen and (max-width: $break-extra-small)
+      +fs(12)
+  &__cost
+    line-height: 1
+    display: flex
+    align-items: flex-start
+  &__currency
+    margin-top: 0.1rem
+    margin-right: 0.1rem
+    +fs(14)
+  &__value
+    +fs(24)
+
+.tagfield
+  margin: 3px 0

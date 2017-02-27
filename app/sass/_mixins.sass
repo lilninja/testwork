@@ -1,0 +1,79 @@
+=justify
+	text-align: justify
+	line-height: 0
+	font-size: 0
+	text-justify: newspaper
+	zoom: 1
+	text-align-last: justify
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0px
+		visibility: hidden
+		overflow: hidden
+
+=font($alias, $name)
+	@font-face
+		font-family: $alias
+		src: url("fonts/" + $name + ".eot")
+		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff2") format("woff2"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+// usage:
+//+font(black, cytiapro-black-webfont)
+
+=placeholder
+	&::placeholder
+		@content
+
+=text-overflow
+	overflow: hidden
+	-ms-text-overflow: ellipsis
+	text-overflow: ellipsis
+	white-space: nowrap
+
+=hide-text
+	font: 0/0 a
+	text-shadow: none
+	color: transparent
+
+=arr($width, $height, $bg, $direction)
+	width: 0px
+	height: 0px
+	border-style: solid
+	@if $direction == t
+		border-width: 0 $width / 2 + px $height + px $width / 2 + px
+		border-color: transparent transparent $bg transparent
+	@if $direction == r
+		border-width: $height / 2 + px 0 $height / 2 + px $width + px
+		border-color: transparent transparent transparent $bg
+	@if $direction == b
+		border-width: $height + px $width / 2 + px 0 $width / 2 + px
+		border-color: $bg transparent transparent transparent
+	@if $direction == l
+		border-width: $height / 2 + px $width + px $height / 2 + px 0
+		border-color: transparent $bg transparent transparent
+	@if $direction == tl
+		border-width: $height + px $width + px 0 0
+		border-color: $bg transparent transparent transparent
+	@if $direction == tr
+		border-width: 0 $width + px $height + px 0
+		border-color: transparent $bg transparent transparent
+	@if $direction == br
+		border-width: 0 0 $height + px $width + px
+		border-color: transparent transparent $bg transparent
+	@if $direction == bl
+		border-width: $height + px 0 0 $width + px
+		border-color: transparent transparent transparent $bg
+// example
+// +arr(500,50, #000, l)
+// +arr(500,50, #000, bl)
+
+=font-size($sizeValue)
+  font-size: ($sizeValue * 16) + px;
+  font-size: $sizeValue + rem;
+
+=fs($sizeValue: 13)
+	font-size: $sizeValue + px
+	font-size: $sizeValue / 10 + rem
