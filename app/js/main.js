@@ -84,11 +84,13 @@ var select = $('#select-state').selectize({
   maxItems: 500,
   placeholder: "enter the names of amenities that you need in apartment",
   onItemAdd: function (value, $item) {
-      $("#" + value).prop( "checked", true );
+      // $("#" + value).prop( "checked", true );
+      $("#" + value).trigger("click");
       showTag(value, $item);
     },
   onItemRemove: function (value) {
-      $("#" + value).prop( "checked", false );
+      // $("#" + value).prop( "checked", false );
+      $("#" + value).trigger("click");
       removeTag(value);
   }
 });
@@ -227,7 +229,7 @@ afterFilter(apartments);
     afterFilter: afterFilter
    }
 });
-FJS.addCriteria({field: 'amenities', ele: '.amenities input:checkbox', all: 'all'});
+FJS.addCriteria({field: 'amenities', ele: '.amenities input:checkbox',event: 'change', all: 'all'});
 
 
 
